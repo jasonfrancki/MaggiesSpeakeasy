@@ -1,3 +1,9 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 main {
 	height: 80vh;
 }
@@ -7,6 +13,7 @@ main {
 	margin: 25px;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 25px;
+	list-style: none;
 }
 
 .drink {
@@ -22,7 +29,17 @@ main {
 ul.allIngredients {
 	height: 10vh;
 	display: flex;
-	justify-content: space-around;
-	list-style: none;
+	justify-content: space-evenly;
 	padding: 0;
+	margin-left: 0;
+	list-style: none;
+	align-items: center;
+}
+
+/* .red {
+	background-color: red;
+} */
+
+.lineThrough {
+	text-decoration: line-through;
 }
