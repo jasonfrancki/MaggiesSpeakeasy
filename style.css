@@ -1,0 +1,28 @@
+main {
+	height: 80vh;
+}
+
+.drinks {
+	display: grid;
+	margin: 25px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+}
+
+.drink {
+	border: 2px solid black;
+	padding: 25px;
+	text-align: center;
+}
+
+.drink img {
+	width: 100%;
+}
+
+ul.allIngredients {
+	height: 10vh;
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	padding: 0;
+}
