@@ -89,9 +89,11 @@ body {
 }
 
 .flip-card-back ul {
-	list-style: square;
+	list-style: none;
 	list-style-position: inside;
 	font-size: 0.5rem;
+	text-transform: uppercase;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 img {
