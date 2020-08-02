@@ -6,14 +6,28 @@ function makeDrink() {
 	for (drink of drinks) {
 		// Create div for each drink
 		const div = document.createElement('div');
-		div.classList.add('drink');
-		div.innerHTML += `<h3>${drink.name}</h3>`;
-		div.innerHTML += `<img src="./img/drinks/${drink.name}.jpg">`;
-		div.innerHTML += `<p>${drink.description}</p>`;
+		let drinkIngredients;
 		for (ing of drink.ingredients) {
-			div.innerHTML += `<li>${ing}</li>`;
+			console.log(ing);
+			drinkIngredients += `<li>${ing}</li>`;
 		}
-		div.innerHTML += `</ul>`;
+		div.classList.add('drink');
+		div.innerHTML = `
+			<div class="flip-card">
+				<div class="flip-card-inner">
+		  			<div class="flip-card-front">
+					<h3>${drink.name}</h3>
+					<img src="./img/drinks/${drink.name}.jpg">
+				</div>
+				<div class="flip-card-back">
+					<p>${drink.description}</p>
+					${drinkIngredients}
+				</div>
+			</div>
+		`;
+		div.addEventListener('click', () => {
+			div.classList.toggle('flip-card-click');
+		});
 		drinksList.appendChild(div);
 
 		// if (drink.missingIngredients.length > 0) {
@@ -21,10 +35,10 @@ function makeDrink() {
 		// }
 	}
 
-	for (ing of ingredients.sort()) {
-		ul.innerHTML += `<li>${ing.name}</li>`;
-		console.log(ing.name);
-	}
+	// for (ing of ingredients.sort()) {
+	// 	ul.innerHTML += `<li>${ing.name}</li>`;
+	// 	console.log(ing.name);
+	// }
 }
 
 // function checkIngredients() {
