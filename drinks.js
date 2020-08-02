@@ -19,9 +19,9 @@ const drinks = [
 	},
 	{
 		description:
-			'This incredible vodka mixed drink recipe calls for vodka, coconut rum, Peach Schnapps, blue raspberry vodka, and lemon lime soda, and is garnished with Swedish Fish Candy and Nerds in order to make this bad boy look like a legitimate little fishbowl.',
-		ingredients: [ 'Vodka', 'Coconut Rum', 'Peach Schnapps', 'Blue Raspberry Vodka', 'Lemon Lime Soda' ],
-		name: 'Personal Fishbowl'
+			'To make this incredible vodka candy mixed drink, just mix up blue curacao, sweet & sour mix, grenadine, and cranberry juice, and then rim and garnish with purple sugar and a lemon wheel.',
+		ingredients: [ 'Vodka', 'Blue Curacao', 'Sweet and Sour', 'Grenadine', 'Cranberry Juice' ],
+		name: 'Purple People Eater'
 	},
 	{
 		description:
