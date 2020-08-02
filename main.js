@@ -6,8 +6,8 @@ function makeDrink() {
 	for (drink of drinks) {
 		// Create div for each drink
 		const div = document.createElement('div');
-		let drinkIngredients;
-		for (ing of drink.ingredients) {
+		let drinkIngredients = `<ul>`;
+		for (ing of drink.ingredients.sort()) {
 			console.log(ing);
 			drinkIngredients += `<li>${ing}</li>`;
 		}
@@ -20,7 +20,7 @@ function makeDrink() {
 					<img src="./img/drinks/${drink.name}.jpg">
 				</div>
 				<div class="flip-card-back">
-					<p>${drink.description}</p>
+					<h5>${drink.description}<h5>
 					${drinkIngredients}
 				</div>
 			</div>
