@@ -71,6 +71,16 @@ const drinks = [{
 		name: 'Sweet Poison'
 	},
 	{
+		name: 'Tequila Sunrise',
+		description: 'This beautiful, refreshingly fruity cocktail is made with Jose Cuervo tequila, orange juice, and grenadine.',
+		ingredients: [
+			'Tequila',
+			'Orange Juice',
+			'Grenadine'
+		],
+		garnish: ['Orange', 'Cherry']
+	},
+	{
 		name: 'Tropical Dream',
 		description: 'Combine Malibu Coconut Rum with pineapple juice and blue curacao.  So good, you\'ll think you\'re dreaming.',
 		ingredients: [

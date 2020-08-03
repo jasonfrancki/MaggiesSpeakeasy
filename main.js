@@ -26,6 +26,9 @@ function makeDrink() {
 			</div>
 		`;
 		div.addEventListener('click', () => {
+			if (document.querySelector('.flip-card-click')) {
+				document.querySelector('.flip-card-click').classList.remove('flip-card-click');
+			};
 			div.classList.toggle('flip-card-click');
 		});
 		drinksList.appendChild(div);
