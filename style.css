@@ -1,3 +1,9 @@
+:root {
+	--primary-color: #000;
+	--secondary-color: #00ffff;
+	--tertiary-color: #c8102e;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -5,8 +11,27 @@
 	/* background-color: gray; */
 }
 
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	width: 100vw;
+	height: 5vh;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 0.75rem;
+	color: var(--tertiary-color);
+}
+
 body {
-	background-color: black;
+	background-color: var(--secondary-color);
 }
 
 .drinks {
@@ -26,18 +51,18 @@ body {
 }
 
 .drink li {
-	color: pink;
+	color: var(--primary-color);
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-	background-color: transparent;
+	background-color: var(--tertiary-color);
 	width: 300px;
 	height: 200px;
 	perspective: 1000px;
 	/* Remove this if you don't want the 3D effect */
 	margin-bottom: 50px;
-	border: 2px solid pink;
+	/* border: 2px solid var(--primary-color); */
 	border-radius: 5px;
 }
 
@@ -75,15 +100,15 @@ body {
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
 	/* background-color: #000; */
-	color: pink;
+	color: var(--primary-color);
 	width: 100%;
 	border-radius: 2%;
 }
 
 /* Style the back side */
 .flip-card-back {
-	/* background-color: black; */
-	color: pink;
+	/* background-color: var(--secondary-color); */
+	color: var(--primary-color);
 	transform: rotateY(180deg);
 	display: flex;
 	flex-direction: column;
@@ -99,7 +124,7 @@ body {
 }
 
 img {
-	border: 2px solid pink;
+	border: 2px solid var(--primary-color);
 	border-radius: 10%;
 	padding: 3px;
 }
