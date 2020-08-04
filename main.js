@@ -26,10 +26,14 @@ function makeDrink() {
 			</div>
 		`;
 		div.addEventListener('click', () => {
-			if (document.querySelector('.flip-card-click')) {
-				document.querySelector('.flip-card-click').classList.remove('flip-card-click');
-			};
-			div.classList.toggle('flip-card-click');
+			if (div.classList.contains('flip-card-click')) {
+				div.classList.remove('flip-card-click');
+			} else {
+				if (document.querySelector('.flip-card-click')) {
+					document.querySelector('.flip-card-click').classList.remove('flip-card-click');
+				}
+				div.classList.add('flip-card-click');
+			}
 		});
 		drinksList.appendChild(div);
 
@@ -43,7 +47,7 @@ function makeDrink() {
 	// 	console.log(ing.name);
 	// }
 }
-
+makeDrink();
 // function checkIngredients() {
 // 	const drinks = document.querySelectorAll('.drink');
 // 	for (drink of drinks) {
@@ -76,7 +80,6 @@ function makeDrink() {
 // 	// }
 // }
 
-makeDrink();
 // checkIngredients();
 // Loop through drink objects and create a div for each one with name, photo, description and
 // ingredient list
@@ -86,17 +89,3 @@ makeDrink();
 // List these in alphabetical order in the footer
 // OnClick of ingredient - toggle strikethrough on list in footer and each drink that contains
 // that ingredient, and change background to red and adjust opacity
-
-const lis = document.querySelectorAll('.allIngredients li');
-
-for (li of lis) {
-	li.addEventListener('click', () => {
-		// event.target.classList.toggle('lineThrough');
-		if (allMissingIngredients.indexOf(event.target.textContent) === -1) {
-			allMissingIngredients.push(event.target.textContent);
-		} else {
-			allMissingIngredients.pop(event.target.textContent);
-		}
-		checkIngredients();
-	});
-}
