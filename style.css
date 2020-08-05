@@ -5,11 +5,18 @@
 } */
 
 :root {
+	--primary-color: #6200ee;
+	--secondary-color: #ebe0fc;
+	--tertiary-color: #ffffff;
+	--text-color: #0d0d0d;
+}
+/* DARK MODE */
+/* :root {
 	--primary-color: #1f1f1f;
 	--secondary-color: #121212;
 	--tertiary-color: #1e1e1e;
 	--text-color: #bb86fc;
-}
+} */
 
 * {
 	padding: 0;
@@ -20,7 +27,7 @@
 
 nav {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	background-color: var(--primary-color);
 	color: var(--text-color);
@@ -34,6 +41,7 @@ nav {
 
 nav h4 {
 	font-family: 'Satisfy', cursive;
+	font-size: 2rem;
 }
 
 nav a {
@@ -41,6 +49,16 @@ nav a {
 	/* font-size: 0.75rem; */
 	color: var(--text-color);
 	font-family: 'Chilanka', cursive;
+}
+
+nav button {
+	font-size: 1.25rem;
+	padding: 10px;
+	color: var(--text-color);
+	background-color: var(--secondary-color);
+	font-family: 'Chilanka', cursive;
+	border: none;
+	outline: none;
 }
 
 main {

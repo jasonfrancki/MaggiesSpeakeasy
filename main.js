@@ -68,3 +68,34 @@ initialize();
 // 	--secondary-color: white;
 // 	--tertiary-color: blue;
 // }
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+	let root = document.body;
+	if (button.textContent === 'Dark Mode') {
+		root.style.setProperty('--primary-color', '#1f1f1f');
+		root.style.setProperty('--secondary-color', '#121212');
+		root.style.setProperty('--tertiary-color', '#1e1e1e');
+		root.style.setProperty('--text-color', '#bb86fc');
+		button.textContent = 'Light Mode';
+	} else {
+		console.log('else' + button.textContent);
+		root.style.setProperty('--primary-color', '#6200ee');
+		root.style.setProperty('--secondary-color', '#ebe0fc');
+		root.style.setProperty('--tertiary-color', '#ffffff');
+		root.style.setProperty('--text-color', '#0d0d0d');
+		button.textContent = 'Dark Mode';
+	}
+});
+
+// Light Mode
+// --primary-color: #6200ee;
+// --secondary-color: #ebe0fc;
+// --tertiary-color: #ffffff;
+// --text-color: #0d0d0d;
+
+// Dark Mode
+// --primary-color: #1f1f1f;
+// --secondary-color: #121212;
+// --tertiary-color: #1e1e1e;
+// --text-color: #bb86fc;
