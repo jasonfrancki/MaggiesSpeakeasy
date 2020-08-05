@@ -47,4 +47,24 @@ function makeDrink() {
 	// 	console.log(ing.name);
 	// }
 }
-makeDrink();
+
+function changeColor() {
+	let root = document.body;
+	root.addEventListener('click', (e) => {
+		console.log('clicked');
+		root.style.setProperty('--primary-color', 'pink');
+	});
+}
+
+function initialize() {
+	makeDrink();
+	// changeColor();
+}
+
+initialize();
+
+// :root {
+// 	--primary-color: red;
+// 	--secondary-color: white;
+// 	--tertiary-color: blue;
+// }
