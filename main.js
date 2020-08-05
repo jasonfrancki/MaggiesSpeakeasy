@@ -71,6 +71,8 @@ initialize();
 
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
+	// Change colors - more near black/gray and white
+	// nav bar black background with white letters, body the reverse
 	let root = document.body;
 	if (button.textContent === 'Dark Mode') {
 		root.style.setProperty('--primary-color', '#1f1f1f');
