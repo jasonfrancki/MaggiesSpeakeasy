@@ -77,17 +77,17 @@ button.addEventListener('click', () => {
 	let root = document.body;
 	if (!isDark) {
 		root.style.setProperty('--primary-color', '#1f1f1f');
-		root.style.setProperty('--secondary-color', '#121212');
+		root.style.setProperty('--secondary-color', '#444');
 		root.style.setProperty('--tertiary-color', '#1e1e1e');
 		root.style.setProperty('--text-color', '#bb86fc');
 		isDark = true;
 		// button.textContent = 'Light Mode';
 	} else {
 		console.log('else' + button.textContent);
-		root.style.setProperty('--primary-color', '#6200ee');
-		root.style.setProperty('--secondary-color', '#ebe0fc');
-		root.style.setProperty('--tertiary-color', '#ffffff');
-		root.style.setProperty('--text-color', '#0d0d0d');
+		root.style.setProperty('--primary-color', 'rgb(255, 192, 245)');
+		root.style.setProperty('--text-color', '#444');
+		root.style.setProperty('--tertiary-color', 'rgb(255, 192, 245)');
+		root.style.setProperty('--secondary-color', '#0d0d0d');
 		isDark = false;
 		// button.textContent = 'Dark Mode';
 	}
