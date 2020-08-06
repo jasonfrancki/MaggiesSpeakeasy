@@ -69,24 +69,27 @@ initialize();
 // 	--tertiary-color: blue;
 // }
 
-const button = document.querySelector('button');
+const button = document.querySelector('i');
+let isDark = false;
 button.addEventListener('click', () => {
 	// Change colors - more near black/gray and white
 	// nav bar black background with white letters, body the reverse
 	let root = document.body;
-	if (button.textContent === 'Dark Mode') {
+	if (!isDark) {
 		root.style.setProperty('--primary-color', '#1f1f1f');
 		root.style.setProperty('--secondary-color', '#121212');
 		root.style.setProperty('--tertiary-color', '#1e1e1e');
 		root.style.setProperty('--text-color', '#bb86fc');
-		button.textContent = 'Light Mode';
+		isDark = true;
+		// button.textContent = 'Light Mode';
 	} else {
 		console.log('else' + button.textContent);
 		root.style.setProperty('--primary-color', '#6200ee');
 		root.style.setProperty('--secondary-color', '#ebe0fc');
 		root.style.setProperty('--tertiary-color', '#ffffff');
 		root.style.setProperty('--text-color', '#0d0d0d');
-		button.textContent = 'Dark Mode';
+		isDark = false;
+		// button.textContent = 'Dark Mode';
 	}
 });
 

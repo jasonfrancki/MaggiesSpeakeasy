@@ -61,6 +61,10 @@ nav button {
 	outline: none;
 }
 
+nav i {
+	font-size: 2rem;
+}
+
 main {
 	padding-top: 10vh;
 }
