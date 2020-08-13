@@ -6,7 +6,7 @@
 
 :root {
 	--primary-color: rgb(255, 192, 245);
-	--secondary-color: #0d0d0d;
+	--secondary-color: rgb(255, 192, 245);
 	--tertiary-color: rgb(255, 192, 245);
 	--text-color: #444;
 }
@@ -37,6 +37,7 @@ nav {
 	top: 0;
 	z-index: 1;
 	font-size: 1.25rem;
+	border-bottom: 2px solid var(--text-color);
 }
 
 nav h4 {
@@ -96,13 +97,15 @@ body {
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
 	background-color: var(--tertiary-color);
-	width: 400px;
-	height: 400px;
+	width: 500px;
+	height: 500px;
 	/* perspective: 1000px; */
 	/* Remove this if you don't want the 3D effect */
 	margin-bottom: 50px;
 	/* border: 10px solid var(--primary-color); */
-	border-radius: 5px;
+	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
+	border: 2px solid var(--text-color);
 }
 
 /* This container is needed to position the front and back side */
